@@ -1,0 +1,945 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, _reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, _reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, _reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, _reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, _reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, _reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, _reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, _fonts.scss */
+body {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: Lato;
+}
+
+/* line 8, style.scss */
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 13, style.scss */
+.header {
+  background-color: #373c3f;
+  position: relative;
+}
+/* line 17, style.scss */
+.header__title {
+  font-family: Montserrat;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 0.857em;
+  display: inline-block;
+  padding: 12px 0 13px;
+}
+/* line 25, style.scss */
+.header__logo {
+  display: none;
+}
+
+/* line 30, style.scss */
+.header-nav {
+  display: none;
+}
+/* line 33, style.scss */
+.header-nav.active {
+  display: block;
+  width: 181px;
+  height: 161px;
+  position: absolute;
+  top: 37px;
+  right: 0;
+  background-color: #fafafa;
+}
+
+/* line 44, style.scss */
+.header-nav-list__link {
+  display: block;
+  color: #444444;
+  font-family: Lato;
+  font-size: 0.85em;
+  font-weight: 400;
+  padding: 9px;
+  text-decoration: none;
+  border-bottom: 2px solid #f1f1f1;
+}
+/* line 53, style.scss */
+.header-nav-list__link:focus {
+  background-color: #f5f5f5;
+}
+
+/* line 58, style.scss */
+.burger-menu {
+  width: 41px;
+  background-color: #202529;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 18px 0;
+}
+
+/* line 67, style.scss */
+.line {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 18px;
+  left: 12px;
+}
+
+/* line 76, style.scss */
+.line::before {
+  content: '';
+  width: 16px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+
+/* line 85, style.scss */
+.line::after {
+  content: '';
+  width: 16px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+/* line 94, style.scss */
+.line.active {
+  background: none;
+}
+/* line 97, style.scss */
+.line.active::before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/* line 101, style.scss */
+.line.active::after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* line 106, style.scss */
+.banner {
+  background-image: url("../Image/header-fon.png");
+  background-size: cover;
+  padding-bottom: 93px;
+  padding-top: 15px;
+}
+/* line 111, style.scss */
+.banner__title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.14em;
+  line-height: 1.5;
+}
+/* line 117, style.scss */
+.banner__link {
+  color: #a6d6e0;
+  font-weight: 700;
+  padding-top: 7px;
+  cursor: pointer;
+}
+
+/* line 124, style.scss */
+.menu-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/* line 127, style.scss */
+.menu-head__section {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.42em;
+  margin-bottom: 2px;
+  position: relative;
+  background-size: cover;
+}
+/* line 134, style.scss */
+.menu-head__section::after {
+  content: '\f054';
+  font-family: 'FontAwesome';
+  display: block;
+  background-color: #acd8ad;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 73px;
+  text-align: center;
+  padding-top: 27px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* line 148, style.scss */
+.menu-head__section--bkg_pizza {
+  background-image: url("../Image/Pizza_delivery_fon_copy_3.png");
+  margin-top: 5px;
+  padding: 26px 61px 29px;
+}
+/* line 153, style.scss */
+.menu-head__section--bkg_salads {
+  background-image: url("../Image/UA/UX_Salads_fon_copy_3.png");
+  padding: 29px 72px 27px;
+}
+/* line 157, style.scss */
+.menu-head__section--bkg_desserts {
+  background-image: url("../Image/Desserts_fon_copy_3.png");
+  padding: 30px 84px;
+}
+
+/* line 165, style.scss */
+.menu-list {
+  color: #3f4043;
+}
+/* line 167, style.scss */
+.menu-list__title {
+  text-transform: uppercase;
+  font-size: 1.35em;
+  margin-top: 25px;
+}
+/* line 172, style.scss */
+.menu-list__subtitle {
+  color: #cbccce;
+  font-size: 0.7em;
+  padding-top: 4px;
+  color: #cbccce;
+}
+/* line 178, style.scss */
+.menu-list__logo {
+  display: none;
+}
+
+/* line 183, style.scss */
+.menu-list-chapter {
+  background-color: #3f4043;
+  color: #acd8ad;
+  text-transform: uppercase;
+  font-size: 1.35em;
+  padding: 12px 19px;
+  margin-top: 10px;
+}
+/* line 190, style.scss */
+.menu-list-chapter--green {
+  background-color: #acd8ad;
+  color: #ffffff;
+}
+
+/* line 195, style.scss */
+.menu-list-subchapter {
+  text-transform: uppercase;
+  font-size: 1.07em;
+  padding-top: 19px;
+  padding-bottom: 21px;
+  display: inline-block;
+}
+
+/* line 202, style.scss */
+.sprite {
+  background-image: url("../Image/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 25px;
+  display: inline-block;
+  float: right;
+  margin-top: 12px;
+}
+
+/* line 211, style.scss */
+.sprite-lattice {
+  background-position: -93px -10px;
+}
+
+/* line 214, style.scss */
+.sprite-glass {
+  background-position: -52px -10px;
+}
+
+/* line 217, style.scss */
+.sprite-cap {
+  background-position: -10px -47px;
+}
+
+/* line 220, style.scss */
+.sprite-beer_mug {
+  background-position: -5px -89px;
+}
+
+/* line 224, style.scss */
+.menu-list-item__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/* line 228, style.scss */
+.menu-list-item__name {
+  padding-bottom: 8px;
+  position: relative;
+  padding-left: 7px;
+}
+/* line 232, style.scss */
+.menu-list-item__name::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #3f4043;
+  position: absolute;
+  top: 6px;
+  left: 1px;
+}
+/* line 244, style.scss */
+.menu-list-item__price {
+  font-weight: 700;
+}
+/* line 247, style.scss */
+.menu-list-item__description {
+  font-size: 0.64em;
+  padding-bottom: 11px;
+}
+
+/* line 252, style.scss */
+.footer {
+  margin-top: 37px;
+  background-color: #acd8ad;
+  text-align: center;
+  color: #ffffff;
+  padding: 12px 0;
+  line-height: 1.2;
+}
+/* line 259, style.scss */
+.footer__logo {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  /* line 3, _media-640.scss */
+  .header__title {
+    font-size: 1.7em;
+    padding: 23px 0;
+  }
+  /* line 6, _media-640.scss */
+  .header__title::after {
+    padding-top: 26px;
+    width: 82px;
+  }
+
+  /* line 13, _media-640.scss */
+  .header-nav {
+    display: none;
+  }
+  /* line 16, _media-640.scss */
+  .header-nav.active {
+    width: 245px;
+    height: 240px;
+    top: 69px;
+  }
+
+  /* line 23, _media-640.scss */
+  .header-nav-list__link {
+    display: block;
+    color: #444444;
+    font-family: Lato;
+    font-size: 1em;
+    padding: 16px 0 15px 30px;
+  }
+
+  /* line 31, _media-640.scss */
+  .burger-menu {
+    width: 81px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 35px 0 34px;
+  }
+
+  /* line 38, _media-640.scss */
+  .line {
+    display: block;
+    width: 32px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 34px;
+    left: 25px;
+  }
+
+  /* line 47, _media-640.scss */
+  .line::before {
+    content: '';
+    width: 32px;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -8px;
+    left: 0;
+  }
+
+  /* line 56, _media-640.scss */
+  .line::after {
+    content: '';
+    width: 32px;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 8px;
+    left: 0;
+  }
+
+  /* line 65, _media-640.scss */
+  .line.active {
+    background: none;
+  }
+  /* line 68, _media-640.scss */
+  .line.active::before {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  /* line 72, _media-640.scss */
+  .line.active::after {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  /* line 78, _media-640.scss */
+  .banner {
+    padding-bottom: 197px;
+    padding-top: 30px;
+  }
+  /* line 81, _media-640.scss */
+  .banner__title {
+    font-size: 2.57em;
+  }
+  /* line 84, _media-640.scss */
+  .banner__link {
+    padding-top: 22px;
+    font-size: 1.71em;
+  }
+
+  /* line 91, _media-640.scss */
+  .menu-head__section {
+    font-size: 2.57em;
+    margin-bottom: 6px;
+  }
+  /* line 94, _media-640.scss */
+  .menu-head__section::after {
+    width: 142px;
+    padding-top: 64px;
+  }
+  /* line 98, _media-640.scss */
+  .menu-head__section--bkg_pizza {
+    background-image: url("../Image/Pizza_delivery_fon_copy_3.png");
+    margin-top: 5px;
+    padding: 59px 137px 58px;
+  }
+  /* line 103, _media-640.scss */
+  .menu-head__section--bkg_salads {
+    background-image: url("../Image/UA/UX_Salads_fon_copy_3.png");
+    padding: 61px 138px 60px;
+  }
+  /* line 107, _media-640.scss */
+  .menu-head__section--bkg_desserts {
+    background-image: url("../Image/Desserts_fon_copy_3.png");
+    padding: 58px 177px 66px 184px;
+  }
+
+  /* line 115, _media-640.scss */
+  .menu-list {
+    color: #3f4043;
+  }
+  /* line 117, _media-640.scss */
+  .menu-list__title {
+    text-transform: uppercase;
+    font-size: 2.7em;
+    margin-top: 45px;
+  }
+  /* line 122, _media-640.scss */
+  .menu-list__subtitle {
+    font-size: 1.42em;
+    padding-top: 9px;
+    color: #cbccce;
+  }
+
+  /* line 129, _media-640.scss */
+  .menu-list-chapter {
+    font-size: 2.85em;
+    padding: 23px 38px;
+    margin-top: 20px;
+  }
+
+  /* line 134, _media-640.scss */
+  .menu-list-subchapter {
+    font-size: 2.14em;
+    padding-top: 38px;
+    padding-bottom: 42px;
+  }
+
+  /* line 139, _media-640.scss */
+  .sprite {
+    background-image: url("../Image/spritesheet-640.png");
+    width: 61px;
+    height: 50px;
+    margin-top: 27px;
+  }
+
+  /* line 145, _media-640.scss */
+  .sprite-lattice {
+    background-position: -136px -10px;
+  }
+
+  /* line 148, _media-640.scss */
+  .sprite-glass {
+    background-position: -76px -10px;
+  }
+
+  /* line 151, _media-640.scss */
+  .sprite-cap {
+    background-position: -9px -72px;
+  }
+
+  /* line 154, _media-640.scss */
+  .sprite-beer_mug {
+    background-position: -2px -10px;
+  }
+
+  /* line 158, _media-640.scss */
+  .menu-list-item__name {
+    padding-bottom: 16px;
+    padding-left: 15px;
+    font-size: 1.92em;
+  }
+  /* line 162, _media-640.scss */
+  .menu-list-item__name::before {
+    width: 4px;
+    height: 4px;
+    top: 14px;
+    left: 4px;
+  }
+  /* line 169, _media-640.scss */
+  .menu-list-item__price {
+    font-weight: 700;
+    font-size: 1.9em;
+  }
+  /* line 173, _media-640.scss */
+  .menu-list-item__description {
+    font-size: 1.28em;
+    padding-bottom: 22px;
+  }
+
+  /* line 178, _media-640.scss */
+  .footer {
+    font-size: 1.28em;
+  }
+  /* line 180, _media-640.scss */
+  .footer__logo {
+    display: none;
+  }
+}
+@media (min-width: 980px) {
+  /* line 2, _media-980.scss */
+  .header {
+    padding: 7px 0;
+    margin-bottom: 1px;
+  }
+  /* line 5, _media-980.scss */
+  .header__title {
+    display: none;
+  }
+  /* line 8, _media-980.scss */
+  .header__title::after {
+    display: none;
+  }
+  /* line 12, _media-980.scss */
+  .header__logo {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* line 17, _media-980.scss */
+  .header-nav {
+    display: block;
+  }
+  /* line 19, _media-980.scss */
+  .header-nav.active {
+    display: none;
+  }
+
+  /* line 23, _media-980.scss */
+  .header-nav-list {
+    width: 610px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-transform: uppercase;
+  }
+  /* line 30, _media-980.scss */
+  .header-nav-list__link {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Montserrat;
+    font-size: 1.07em;
+    padding: 0;
+    background-color: inherit;
+    border-bottom: none;
+    display: inline-block;
+    font-weight: 400;
+  }
+
+  /* line 44, _media-980.scss */
+  .burger-menu {
+    display: none;
+  }
+
+  /* line 47, _media-980.scss */
+  .wrapper--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  /* line 53, _media-980.scss */
+  .banner {
+    padding-bottom: 250px;
+    padding-top: 64px;
+  }
+  /* line 56, _media-980.scss */
+  .banner__title {
+    font-size: 3.8em;
+  }
+  /* line 59, _media-980.scss */
+  .banner__link {
+    font-size: 2.4em;
+    padding-top: 57px;
+  }
+
+  /* line 64, _media-980.scss */
+  .menu-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  /* line 67, _media-980.scss */
+  .menu-head__section {
+    width: 34%;
+    font-size: 2.5em;
+    padding-top: 145px;
+    text-align: center;
+    margin-top: 6px;
+    cursor: pointer;
+  }
+  /* line 74, _media-980.scss */
+  .menu-head__section::after {
+    display: none;
+  }
+  /* line 77, _media-980.scss */
+  .menu-head__section--bkg_pizza {
+    background-image: url("../Image/Pizza_delivery_fon_copy.png");
+    padding: 145px 0 148px 0;
+  }
+  /* line 81, _media-980.scss */
+  .menu-head__section--bkg_salads {
+    background-image: url("../Image/UA/UX_Salads_fon_copy.png");
+    padding: 145px 0 148px 0;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  /* line 87, _media-980.scss */
+  .menu-head__section--bkg_desserts {
+    background-image: url("../Image/Desserts_fon_copy.png");
+    padding: 145px 0 148px 0;
+  }
+
+  /* line 95, _media-980.scss */
+  .menu-list__title {
+    font-size: 2.42em;
+    margin-top: 72px;
+    display: inline-block;
+  }
+  /* line 100, _media-980.scss */
+  .menu-list__subtitle {
+    font-size: 1.42em;
+    padding-top: 10px;
+  }
+  /* line 104, _media-980.scss */
+  .menu-list__logo {
+    display: inline-block;
+    float: right;
+    padding-top: 47px;
+  }
+
+  /* line 111, _media-980.scss */
+  .menu-list-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* line 116, _media-980.scss */
+  .menu-list-chapter {
+    font-size: 2.35em;
+    padding: 27px 22px;
+    margin-top: 21px;
+  }
+
+  /* line 121, _media-980.scss */
+  .menu-list-subchapter {
+    font-size: 1.85em;
+    padding-top: 41px;
+    padding-bottom: 46px;
+  }
+
+  /* line 126, _media-980.scss */
+  .sprite {
+    background-image: url("../Image/spritesheet-980.png");
+    width: 56px;
+    height: 44px;
+    margin-top: 33px;
+  }
+
+  /* line 132, _media-980.scss */
+  .sprite-lattice {
+    background-position: -131px -10px;
+  }
+
+  /* line 135, _media-980.scss */
+  .sprite-glass {
+    background-position: -74px -10px;
+  }
+
+  /* line 138, _media-980.scss */
+  .sprite-cap {
+    background-position: -10px -69px;
+  }
+
+  /* line 141, _media-980.scss */
+  .sprite-beer_mug {
+    background-position: -10px -10px;
+  }
+
+  /* line 145, _media-980.scss */
+  .menu-list-item__name {
+    padding-bottom: 8px;
+    padding-left: 7px;
+    font-size: 1.7em;
+  }
+  /* line 149, _media-980.scss */
+  .menu-list-item__name::before {
+    width: 3px;
+    height: 3px;
+    top: 11px;
+    left: 0px;
+  }
+  /* line 156, _media-980.scss */
+  .menu-list-item__price {
+    font-size: 1.9em;
+  }
+  /* line 159, _media-980.scss */
+  .menu-list-item__description {
+    font-size: 1.14em;
+    padding-bottom: 17px;
+  }
+
+  /* line 164, _media-980.scss */
+  .footer {
+    margin-top: 84px;
+    padding: 7px 0;
+    font-size: 1.28em;
+  }
+  /* line 168, _media-980.scss */
+  .footer__logo {
+    display: inline-block;
+  }
+  /* line 171, _media-980.scss */
+  .footer__text {
+    display: inline-block;
+  }
+  /* line 173, _media-980.scss */
+  .footer__text br {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 2, _media-1200.scss */
+  .header {
+    padding: 8px 0;
+    margin-bottom: 3px;
+  }
+
+  /* line 7, _media-1200.scss */
+  .banner {
+    padding-bottom: 380px;
+    padding-top: 58px;
+  }
+  /* line 10, _media-1200.scss */
+  .banner__title {
+    font-size: 4.4em;
+  }
+  /* line 13, _media-1200.scss */
+  .banner__link {
+    font-size: 2.7em;
+    padding-top: 53px;
+  }
+
+  /* line 19, _media-1200.scss */
+  .menu-head__section {
+    width: 34%;
+    font-size: 3em;
+    padding: 185px 0;
+  }
+  /* line 23, _media-1200.scss */
+  .menu-head__section--bkg_pizza {
+    background-image: url("../Image/Pizza_delivery_fon_copy.png");
+  }
+  /* line 26, _media-1200.scss */
+  .menu-head__section--bkg_salads {
+    background-image: url("../Image/UA/UX_Salads_fon_copy.png");
+  }
+  /* line 29, _media-1200.scss */
+  .menu-head__section--bkg_desserts {
+    background-image: url("../Image/Desserts_fon_copy.png");
+  }
+
+  /* line 36, _media-1200.scss */
+  .menu-list__title {
+    font-size: 2.85em;
+    margin-top: 77px;
+  }
+  /* line 40, _media-1200.scss */
+  .menu-list__logo {
+    display: inline-block;
+    float: right;
+    padding-top: 47px;
+  }
+
+  /* line 47, _media-1200.scss */
+  .menu-list-chapter {
+    font-size: 2.85em;
+    padding: 27px 20px;
+    margin-top: 21px;
+  }
+
+  /* line 52, _media-1200.scss */
+  .menu-list-subchapter {
+    font-size: 2.14em;
+    padding-top: 38px;
+    padding-bottom: 42px;
+  }
+
+  /* line 59, _media-1200.scss */
+  .menu-list-item__name {
+    padding-bottom: 8px;
+    padding-left: 7px;
+    font-size: 1.92em;
+  }
+  /* line 64, _media-1200.scss */
+  .menu-list-item__price {
+    font-size: 1.9em;
+  }
+  /* line 67, _media-1200.scss */
+  .menu-list-item__description {
+    font-size: 1.28em;
+    padding-bottom: 17px;
+  }
+
+  /* line 72, _media-1200.scss */
+  .footer {
+    margin-top: 128px;
+    font-size: 1.28em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

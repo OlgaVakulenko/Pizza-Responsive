@@ -1,0 +1,175 @@
+@media (min-width: 980px) {
+  .header {
+    padding: 7px 0;
+    margin-bottom: 1px;
+    &__title {
+      display: none;
+
+      &::after {
+        display: none;
+      }
+    }
+    &__logo {
+      display: block;
+      cursor: pointer;
+    }
+  }
+    .header-nav {
+      display: block;
+    }
+  .header-nav-list {
+    width: 610px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    &__link {
+      color: #ffffff;
+      text-decoration: none;
+      cursor: pointer;
+      display:inline-block;
+      font-family: Montserrat;
+      font-size: 1.07em;
+      padding: 0;
+      background-color: inherit;
+      border-bottom: none;
+      display:inline-block;
+      font-weight: 400;
+    }
+  }
+  .burger-menu {
+    display: none;
+  }
+  .wrapper--flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .banner {
+    padding-bottom: 250px;
+    padding-top: 64px;
+    &__title {
+      font-size: 3.8em;
+    }
+    &__link {
+      font-size: 2.4em;
+      padding-top: 57px;
+    }
+  }
+  .menu-head {
+    display: flex;
+    flex-direction: row;
+    &__section{
+      width: 34%;
+      font-size: 2.5em;
+      padding-top: 145px;
+      text-align: center;
+      margin-top: 6px;
+      cursor: pointer;
+      &::after{
+        display: none;
+      }
+      &--bkg_pizza{
+        background-image: url("../Image/Pizza_delivery_fon_copy.png");
+        padding: 145px 0 148px 0;
+      }
+      &--bkg_salads{
+        background-image: url("../Image/UA/UX_Salads_fon_copy.png");
+        padding: 145px 0 148px 0;
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+      &--bkg_desserts{
+        background-image: url("../Image/Desserts_fon_copy.png");
+        padding: 145px 0 148px 0;
+      }
+    }
+  }
+
+  .menu-list {
+    &__title {
+      font-size: 2.42em;
+      margin-top: 72px;
+      display: inline-block;
+    }
+    &__subtitle {
+      font-size: 1.42em;
+      padding-top: 10px;
+    }
+    &__logo{
+      display: inline-block;
+      float: right;
+      padding-top: 47px;
+    }
+  }
+
+  .menu-list-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .menu-list-chapter {
+    font-size: 2.35em;
+    padding: 27px 22px;
+    margin-top: 21px;
+  }
+  .menu-list-subchapter {
+    font-size: 1.85em;
+    padding-top: 41px;
+    padding-bottom: 46px;
+  }
+  .sprite {
+    background-image: url("../Image/spritesheet-980.png");
+    width: 56px;
+    height: 44px;
+    margin-top: 33px;
+  }
+  .sprite-lattice {
+    background-position: -131px -10px;
+  }
+  .sprite-glass {
+    background-position: -74px -10px;
+  }
+  .sprite-cap {
+    background-position: -10px -69px;
+  }
+  .sprite-beer_mug {
+    background-position: -10px -10px;
+  }
+  .menu-list-item {
+    &__name {
+      padding-bottom: 8px;
+      padding-left: 7px;
+      font-size: 1.7em;
+      &::before{
+        width: 3px;
+        height: 3px;
+        top: 11px;
+        left: 0px;
+      }
+    }
+    &__price{
+      font-size: 1.9em;
+    }
+    &__description {
+      font-size: 1.14em;
+      padding-bottom: 17px;
+    }
+  }
+  .footer {
+    margin-top: 84px;
+    padding: 7px 0;
+    font-size: 1.28em;
+    &__logo {
+      display: inline-block;
+    }
+    &__text{
+      display: inline-block;
+      & br {
+        display: none;
+      }
+    }
+  }
+}

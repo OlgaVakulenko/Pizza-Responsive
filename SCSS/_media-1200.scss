@@ -1,0 +1,76 @@
+@media (min-width: 1200px) {
+  .header {
+    padding: 8px 0;
+    margin-bottom: 3px;
+    }
+
+  .banner {
+    padding-bottom: 380px;
+    padding-top: 58px;
+    &__title {
+      font-size: 4.4em;
+    }
+    &__link {
+      font-size: 2.7em;
+      padding-top: 53px;
+    }
+  }
+  .menu-head {
+    &__section{
+      width: 34%;
+      font-size: 3em;
+      padding: 185px 0;
+      &--bkg_pizza{
+        background-image: url("../Image/Pizza_delivery_fon_copy.png");
+      }
+      &--bkg_salads{
+        background-image: url("../Image/UA/UX_Salads_fon_copy.png");
+      }
+      &--bkg_desserts{
+        background-image: url("../Image/Desserts_fon_copy.png");
+      }
+    }
+  }
+
+  .menu-list {
+    &__title {
+      font-size: 2.85em;
+      margin-top: 77px;
+    }
+    &__logo{
+      display: inline-block;
+      float: right;
+      padding-top: 47px;
+    }
+  }
+
+  .menu-list-chapter {
+    font-size: 2.85em;
+    padding: 27px 20px;
+    margin-top: 21px;
+  }
+  .menu-list-subchapter {
+    font-size: 2.14em;
+    padding-top: 38px;
+    padding-bottom: 42px;
+  }
+
+  .menu-list-item {
+    &__name {
+      padding-bottom: 8px;
+      padding-left: 7px;
+      font-size: 1.92em;
+    }
+    &__price{
+      font-size: 1.9em;
+    }
+    &__description {
+      font-size: 1.28em;
+      padding-bottom: 17px;
+    }
+  }
+  .footer {
+    margin-top: 128px;
+    font-size: 1.28em;
+    }
+  }
